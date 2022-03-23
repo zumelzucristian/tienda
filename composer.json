@@ -1,0 +1,19 @@
+{
+    "name": "zumelzucristian/tienda",
+    "description": "sistema para una tienda",
+    "autoload": {
+        "psr-4": {
+            "App\\" : "app/"
+        },
+        "files":[
+            "app/helpers.php"
+        ] 
+    },
+    "authors": [
+        {
+            "name": "Cristian Zumelzu",
+            "email": "sin@correo.com"
+        }
+    ],
+    "require": {}
+}

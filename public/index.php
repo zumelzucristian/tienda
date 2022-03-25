@@ -1,26 +1,13 @@
 <?php
 
-//requerir auto caraga de composer
-require __DIR__ . '/../vendor/autoload.php';  //Es obligatorio siempre escribir
+require __DIR__ . '/../vendor/autoload.php';
 
-//instanciar
+$request = new App\Http\Request;
 
-$miAuto = new App\Http\Auto; //Se creo un objeto
-$tuAuto = new \App\Http\Auto; //Se creo otro objeto
+//$request->controller="producto";
+//$request->setController('producto');// Funcion para dar un valor
 
-//asignando valores a las propiedades
+//echo srequest->controller;
+//echo $request->getController();// funcion para obtener el valor
 
-$miAuto->color="blanco";
-$miAuto->modelo="camioneta";
-$miAuto->año=1999;
-$miAuto->funcional=false;
-
-$tuAuto->color="rojo";
-$tuAuto->modelo="automovil";
-$tuAuto->año=2022;
-$tuAuto->funcional=true;
-
-// llamar funciones
-
-$miAuto->mostrar();
-$tuAuto->mostrar();
+$request->send();

@@ -12,10 +12,10 @@ class Request
     public function setController($value)
     {
         //$this->controller = $value;
-        if (empty($value[4])) {
+        if (empty($value[1])) {
             $this->controller = "home";
         } else {
-            $this->controller = $value[4];
+            $this->controller = $value[1];
         }
     }
     // obtener el controlador = getControler
@@ -24,16 +24,17 @@ class Request
         //return $this->controller;
         $aux = strtolower($this->controller);  //cliente
         $aux = ucfirst($aux);  //Cliente
-        $aux = $aux . 'Controller'; //ClienteController
-        return $aux;
+       //$aux = $aux . 'Controller'; //ClienteController
+        $aux = 'App\Http\Controllers\\' . $aux . 'Controller'; //ClienteController y ya puede llamar a HomeController.php
+       return $aux;
     }
 
     public function setMethod($value)
     {
-        if (empty($value[5])) {
+        if (empty($value[2])) {
             $this->method = "index";
         } else {
-            $this->method = $value[5];
+            $this->method = $value[2];
         }
     }
 
@@ -60,6 +61,17 @@ class Request
         //var_dump($_SERVER); // ver lo que tiene $_SERVER
         //var_dump($_SERVER['REQUEST_URI']); //devuelve solo la url
         
-        echo '<p>en el controllador [' . $this->getController() . '] llamar al methodo [' . $this->getMethod() . ']</p>';
+        //echo '<p>en el controllador [' . $this->getController() . '] llamar al methodo [' . $this->getMethod() . ']</p>';
+        $myController = $this->getController();
+        $myMethod = $this->getMethod();
+
+        //esto va retornar un objeto, resivir un rsponse
+        $myResponse = call_user_func([new $myController, $myMethod]);
+        
+        //response va llamar al metodo send
+        $myResponse->send();
+
+        
+
     }
 }

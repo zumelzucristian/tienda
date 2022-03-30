@@ -6,6 +6,6 @@ class HidratacionController
 {
 
     function hidratacion(){
-        echo '<p>Hidratación </p>';
-        return new \App\Http\Response('hidratación');
+       
+        return view('hidratación');
     }

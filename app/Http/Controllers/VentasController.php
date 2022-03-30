@@ -18,20 +18,20 @@ class VentasController
 
     function edit()
     {
-        echo '<p>Editar Precio Producto</p>';
+       
         return new \App\Http\Response('EditarPrecioProducto');
     }
 
     function delete ()
     {
-        echo '<p>Eliminar Precio Producto</p>';
-        return new \App\Http\Response('EliminarPrecioProducto');
+        
+        return view('EliminarPrecioProducto');
     }
 
     function ofertas ()
     {
-        echo '<p>Ofertas precio producto</p>';
-        return new \App\Http\Response('OfertasPrecioProducto');
+        
+        return view('OfertasPrecioProducto');
     }
 
 }

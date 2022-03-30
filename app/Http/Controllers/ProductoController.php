@@ -6,26 +6,26 @@ class ProductoController
 {
     function index()
     {
-        echo '<p>Listar productos</p>';
-        return new \App\Http\Response('producto');
+        
+        return view('producto');
     }
 
     function new()
     {
-        echo '<p>Nuevo producto</p>';
-        return new \App\Http\Response('NuevoProducto');
+        
+        return view('NuevoProducto');
     }
 
     function edit()
     {
-        echo '<p>Editar producto</p>';
-        return new \App\Http\Response('EditarProducto');
+        
+        return view('EditarProducto');
     }
 
     function delete ()
     {
-        echo '<p>eliminar Producto</p>';
-        return new \App\Http\Response('EliminarProducto');
+        
+        return view('EliminarProducto');
     }
 
 }

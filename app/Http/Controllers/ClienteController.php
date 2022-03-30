@@ -6,26 +6,22 @@ class ClienteController
 {
     function index()
     {
-        echo '<p>Listar clientes</p>';
-        return new \App\Http\Response('cliente');
+       
+        //return new \App\Http\Response('cliente');
+        return view('ListarCliente'); //Esta funcion se debe declarar,se acorto por helpers
     }
 
     function new()
     {
-        echo '<p>nuevo cliente</p>';
-        return new \App\Http\Response('nuevoCliente');
+        
+        return view('NuevoCliente');
     }
 
     function edit()
     {
-        echo '<p>editar cliente</p>';
-        return new \App\Http\Response('editarCliente');
+       
+        return view('EditarCliente');
     }
 
-    function delete ()
-    {
-        echo '<p>eliminar cliente</p>';
-        return new \App\Http\Response('eliminarCliente');
-    }
 
 }

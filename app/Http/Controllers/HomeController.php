@@ -6,8 +6,9 @@ class HomeController
 {
     function index()
     {
-        echo '<p>implementar la lógica del controlador Home método index </p>';
-        return new \App\Http\Response('Home');
+        //echo '<p>implementar la lógica del controlador Home método index </p>';
+        //return new \App\Http\Response('Home'); 
+        return view('Home'); //se acorto por helpers
     }
 
     /*function saludar()

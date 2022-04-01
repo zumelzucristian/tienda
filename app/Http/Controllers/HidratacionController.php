@@ -7,5 +7,5 @@ class HidratacionController
 
     function hidratacion(){
        
-        return view('hidratación');
+        return view('Hidratacion');
     }

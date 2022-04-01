@@ -12,17 +12,17 @@ class CortesController
 
     function cortesLavado(){
         
-        return view('corteLavado');
+        return view('CorteLavado');
     }
 
     function cortesLavadoCepillado(){
        
-        return view('corteLavadoCepillado');
+        return view('CorteLavadoCepillado');
     }
 
     function cortesLavadoCepilladoPlanchado(){
         
-        return view('corteLavadoCepilladoPlanchado');
+        return view('CorteLavadoCepilladoPlanchado');
     }
 
 }

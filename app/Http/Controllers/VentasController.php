@@ -6,20 +6,20 @@ class VentasController
 {
     function index()
     {
-        echo '<p>Listar precio producto</p>';
-        return new \App\Http\Response('PrecioProducto');
+        
+        return view('PrecioProducto');
     }
 
     function new()
     {
-        echo '<p>Nuevo precio producto</p>';
-        return new \App\Http\Response('NuevoPrecioProducto');
+        
+        return view('NuevoPrecioProducto');
     }
 
     function edit()
     {
        
-        return new \App\Http\Response('EditarPrecioProducto');
+        return view('EditarPrecioProducto');
     }
 
     function delete ()

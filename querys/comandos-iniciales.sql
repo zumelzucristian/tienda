@@ -16,6 +16,7 @@ create table Clientes (
 insert into clientes values ( 1, 'Juan Perez' , '76543210' , 'juan@gmail.com' )
 
 -- insertar datos a una tabla
+insert into Clientes values(1, 'Juan Perez', '72192953', 'juan@gmail.com')
 insert into clientes (nombre,celular,correo) values ( 'Maria Delgado' , '77665544' , 'maria@gmail.com' )
 
 -- eliminar datos de una tabla

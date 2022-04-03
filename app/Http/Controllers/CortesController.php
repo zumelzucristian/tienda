@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 class CortesController 
 {
 
-    function cortes(){
+    function index(){
         
         return view('corte');
     }

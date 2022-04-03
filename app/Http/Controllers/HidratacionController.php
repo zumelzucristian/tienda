@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 class HidratacionController 
 {
 
-    function hidratacion(){
+    function index(){
        
         return view('Hidratacion');
     }

@@ -48,7 +48,7 @@ class Request
     {   
          //separa el string de la URL cada que encuentra un /
         $segment = explode('/', $_SERVER['REQUEST_URI']);
-        //var_dump($this->segment);
+        //var_dump($segment);
 
         //Dar valor del controlador
         $this->setController($segment);

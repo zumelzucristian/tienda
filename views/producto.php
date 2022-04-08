@@ -1,0 +1,2 @@
+
+<p>vista producto</p>

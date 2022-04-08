@@ -7,7 +7,7 @@ class CortesController
 
     function index(){
         
-        return view('corte');
+        return view('cortes');
     }
 
     function cortesLavado(){

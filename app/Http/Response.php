@@ -6,10 +6,12 @@ class Response
 {
     //vamos a devolver vistas
     private $view;
+    private $data;
     
-    function __construct($view)  //que vista quiero reponder
+    function __construct($view , $data)  //que vista quiero reponder
     {
         $this->view = $view;
+        $this->data = $data;
     }
 
     //funcion para ejecutar esa respuesta
@@ -25,6 +27,12 @@ class Response
         //$content = file_get_contents(__DIR__ . '/../../views/'. $this->view . '.php'); // agarra en una variable el contenido
         $content = file_get_contents(pathView($this->view)); 
         
+        foreach($this->data as $key -> $value) {
+            $search = '{{'.$key.'}}';
+            $content = str_replace($search, $value, $content);
+
+        }
+
         //$Layout = file_get_contents(__DIR__ . '/../../views/Layout.php'); // no necrsitamos caragar layout tendremos como un return
         //require __DIR__ . '/../../views/Layout.php'; // requiere carga en linea por eso no se necesita echo
         require pathView('Layout'); 

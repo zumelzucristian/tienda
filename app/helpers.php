@@ -1,11 +1,11 @@
-<?php
+cd <?php
 
 if(!function_exists('view'))
 {
     //Es una función que recive un view y ese view se lo pasa a la instancia o al contructor de mi clase response y lo retorna
-    function view($view)
+    function view($view, $data = []) //$data es un parámetro opcional
     {
-        return new \App\Http\Response($view);
+        return new \App\Http\Response($view, $data);
     }
 }
 

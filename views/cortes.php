@@ -1,0 +1,1 @@
+<p>vista corte</p>
